@@ -11,7 +11,7 @@ app = FastAPI(
     contact={"name": "Александр"}
 )
 
-app.include_router(tasks.router, prefix="/api/v1")
+app.include_router(tasks.router, prefix="/api/v1", tags=["tasks"])
 app.include_router(stats.router, prefix="/stats", tags=["stats"])
 
 # Модель Pydantic для создания новой задачи
